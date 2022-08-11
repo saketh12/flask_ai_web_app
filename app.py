@@ -9,11 +9,13 @@ def man():
     return render_template('home.html')
 
 
+@app.route('/sentiment_analysis')
+def sent():
+    return render_template('sentiment_analysis.html')
 @app.route('/predict', methods=['POST'])
 def home():
-    data1 = request.form['input_text']
-    print("data 1", data1)
-    pred = model(data1)[0]
+    data = request.form['input_text']
+    pred = model(data)[0]
     text = f"label: {pred['label']}, with score: {round(pred['score'], 4)}"
     return render_template('after.html', data=text)
 
