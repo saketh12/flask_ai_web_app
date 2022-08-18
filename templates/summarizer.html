@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body bgcolor="#FFFFFF">
+  <center>
+    <form method="POST" , action="{{url_for('home')}}">
+      <b>
+        Text:
+        <input type="text" , name="text_data" , placeholder="enter text" />
+        <br /><br /></b>
+      <b>
+        Start:
+        <input type="number" , name="minLen" , placeholder="0" />
+        <br /><br /></b>
+      <b>
+        End:
+        <input type="number" , name="maxLen" , placeholder="0" />
+        <br /><br /></b>
+      <input type="submit" , name="summarizer" , value="predict!" />
+    </form>
+    <a href="/"><button>back to home page</button></a>
+  </center>
+</body>
+
+</html>

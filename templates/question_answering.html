@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <body bgcolor="#FFFFFF">
+    <center>
+      <form method="POST" , action="{{url_for('home')}}">
+        <b>
+          Context:
+          <input type="text" , name="context" , placeholder="enter text" />
+          <br /><br
+        /></b>
+        <b>
+          Question:
+          <input type="text" , name="question" , placeholder="enter text" />
+          <br /><br
+        /></b>
+        <input type="submit" , name = "question_answerer", value="predict!" />
+      </form>
+      <a href="/"><button>back to home page</button></a>
+    </center>
+  </body>
+</html>
