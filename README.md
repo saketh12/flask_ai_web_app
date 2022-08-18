@@ -5,6 +5,7 @@ Includes a pretrained models (all taken from the HuggingFace transformer library
 To replicate/create this project, run the following commands to create a virtual environment
 ```
 python3 -m venv venv
+source venv/bin/activate
 ```
 and to install the required dependencies/libraries: 
 ```
