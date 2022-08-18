@@ -4,34 +4,39 @@ import pickle
 
 app = Flask(__name__)
 
+
 @app.route('/')
 def man():
     return render_template('home.html')
+
 
 @app.route('/sentiment_analysis')
 def sent():
     return render_template('sentiment_analysis.html')
 
+
 @app.route('/mlm')
 def mlm():
     return render_template('mlm.html')
+
 
 @app.route('/summarizer')
 def summarizer():
     return render_template('summarizer.html')
 
+
 @app.route('/question_answering')
 def question_answering():
     return render_template('question_answering.html')
+
 
 @app.route('/translation')
 def translation():
     return render_template('translation.html')
 
+
 @app.route('/predict', methods=['POST'])
 def home():
-    text = "I love this movie!!"
-    print(sentiment_analysis(text)[0])
     model_name = list(request.form.keys())[-1]
     if model_name == 'sent' or model_name == 'translator':
         data = request.form['input_text']
@@ -49,12 +54,15 @@ def home():
         text_data = request.form['text_data']
         minLength = int(request.form['minLen'])
         maxLength = int(request.form['maxLen'])
-        result = summarizer(text_data, min_length = minLength, max_length=maxLength)[0]['summary_text']
+        result = summarizer(text_data, min_length=minLength,
+                            max_length=maxLength)[0]['summary_text']
     if model_name == 'question_answerer':
         question_data = request.form['question']
         context_data = request.form['context']
         result = qa(question_data, context_data)['answer']
-    return render_template('after.html', data = result)
+    return render_template('after.html', data=result)
+
+
 if __name__ == "__main__":
     sentiment_analysis = pickle.load(open("model_weights/sent.pkl", 'rb'))
     mlm = pickle.load(open("model_weights/unmask.pkl", 'rb'))

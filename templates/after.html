@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
-  </head>
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
 <body bgcolor="#FFFFFF">
   <center>
-    <h1>PREDICTION :</h1>
+    <h1>Prediction</h1>
     {% autoescape off %}
     <p>{{data}}</p>
     {% endautoescape %}

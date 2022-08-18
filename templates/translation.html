@@ -1,22 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <title>English to French Translation</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
-  </head>
-  <body bgcolor="#FFFFFF">
-    <center>
-      <h1>English to French Translation</h1>
-      <form method="POST" , action="{{url_for('home')}}">
-        <b>
-          English Text:
-          <input type="text" , name="input_text" , placeholder="enter text" />
-          <br /><br
-        /></b>
-        <input type="submit" class="submit_button" name = "translator", value="Predict!" />
-      </form>
-      <a href="/"><button class="home_button">Home Page</button></a>
-    </center>
-  </body>
+
+<head>
+  <meta charset="UTF-8">
+  <title>English to French Translation</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body bgcolor="#FFFFFF">
+  <center>
+    <h1>English to French Translation</h1>
+    <form method="POST" , action="{{url_for('home')}}">
+      <b>
+        English Text:
+        <input type="text" , name="input_text" , placeholder="enter text" />
+        <br /><br /></b>
+      <input type="submit" class="submit_button" name="translator" , value="Predict!" />
+    </form>
+    <a href="/"><button class="home_button">Home Page</button></a>
+  </center>
+</body>
+
 </html>
