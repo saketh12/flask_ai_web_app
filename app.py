@@ -8,7 +8,6 @@ app = Flask(__name__)
 def man():
     return render_template('home.html')
 
-
 @app.route('/sentiment_analysis')
 def sent():
     return render_template('sentiment_analysis.html')
@@ -36,7 +35,6 @@ def home():
     model_name = list(request.form.keys())[-1]
     if model_name == 'sent' or model_name == 'translator':
         data = request.form['input_text']
-        print(data)
         if model_name == 'sent':
             pred = sentiment_analysis(data)[0]
             result = f"label: {pred['label']}, with score: {round(pred['score'], 4)}"
@@ -48,7 +46,6 @@ def home():
         total_text = text1 + " <mask> " + text2
         result = mlm(total_text)[0]['sequence']
     if model_name == 'summarizer':
-        print('entered')
         text_data = request.form['text_data']
         minLength = int(request.form['minLen'])
         maxLength = int(request.form['maxLen'])

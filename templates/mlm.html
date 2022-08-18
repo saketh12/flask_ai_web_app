@@ -1,21 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Masked Language Modeling</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+  </head>
   <body bgcolor="#FFFFFF">
     <center>
+      <h1>Masked Language Modeling</h1>
       <form method="POST" , action="{{url_for('home')}}">
         <b>
-          First value :
+          Before Token:
           <input type="text" , name="input_1_text" , placeholder="enter text" />
           <br /><br
         /></b>
         <b>
-          Second value :
+          After Token:
           <input type="text" , name="input_2_text" , placeholder="enter text" />
           <br /><br
         /></b>
-        <input type="submit" , name = "mlm", value="predict!" />
+        <input type="submit" class="submit_button" name = "mlm", value="Predict!" />
       </form>
-      <a href="/"><button>back to home page</button></a>
+      <a href="/"><button class="home_button">Home Page</button></a>
     </center>
   </body>
 </html>

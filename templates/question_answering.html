@@ -1,7 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Question Answering</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+  </head>
   <body bgcolor="#FFFFFF">
     <center>
+      <h1>Question Answering</h1>
       <form method="POST" , action="{{url_for('home')}}">
         <b>
           Context:
@@ -13,9 +19,9 @@
           <input type="text" , name="question" , placeholder="enter text" />
           <br /><br
         /></b>
-        <input type="submit" , name = "question_answerer", value="predict!" />
+        <input type="submit" class="submit_button" name = "question_answerer", value="Predict!" />
       </form>
-      <a href="/"><button>back to home page</button></a>
+      <a href="/"><button class="home_button">Home Page</button></a>
     </center>
   </body>
 </html>

@@ -4,26 +4,31 @@
 <head>
   <meta charset="UTF-8">
   <title>AI Models Flask</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <div>
-
+  
   <body>
     <center>
       <h1>AI Models Flask Project</h1>
-      <a href="/sentiment_analysis">
-        <button>sentiment analysis</button>
+      <a class="text" href="/sentiment_analysis">
+        <button class="button">Sentiment analysis</button>
       </a>
-      <a href="/summarizer">
-        <button>Text Summarizer</button>
+      <br />
+      <a class="text" href="/summarizer">
+        <button class="button">Text Summarizer</button>
       </a>
-      <a href="/mlm">
-        <button>Masked Language Model</button>
+      <br />
+      <a class="text" href="/mlm">
+        <button class="button">Masked Language Model</button>
       </a>
-      <a href="/question_answering">
-        <button>Question Answering</button>
+      <br />
+      <a class="text" href="/question_answering">
+        <button class="button">Question Answering</button>
       </a>
-      <a href="/translation">
-        <button>Machine Translation</button>
+      <br />
+      <a class="text" href="/translation">
+        <button class="button">Machine Translation: English to French</button>
       </a>
     </center>
 

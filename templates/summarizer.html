@@ -1,8 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-
+  <head>
+    <meta charset="UTF-8">
+    <title>Text Summarization</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+  </head>
 <body bgcolor="#FFFFFF">
   <center>
+    <h1>Text Summarization</h1>
     <form method="POST" , action="{{url_for('home')}}">
       <b>
         Text:
@@ -16,9 +21,9 @@
         End:
         <input type="number" , name="maxLen" , placeholder="0" />
         <br /><br /></b>
-      <input type="submit" , name="summarizer" , value="predict!" />
+      <input type="submit" class="submit_button" name="summarizer" , value="Predict!" />
     </form>
-    <a href="/"><button>back to home page</button></a>
+    <a href="/"><button class="home_button">Home Page</button></a>
   </center>
 </body>
 
